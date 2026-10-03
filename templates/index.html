@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow-sm text-center">
+    <h2 class="mb-3">Счётчик посещений</h2>
+    <div class="display-1 fw-bold text-primary mb-3">{{ visits }}</div>
+    <p class="text-muted mb-4">Количество просмотров главной страницы</p>
+    <form action="/reset" method="POST">
+        <button type="submit" class="btn btn-outline-danger w-100">Сбросить счётчик</button>
+    </form>
+</div>
+{% endblock %}
